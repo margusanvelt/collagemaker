@@ -21,7 +21,7 @@ CORNERS = [(0,0),(CANVAS_X/2,0),(0,CANVAS_Y/2),(CANVAS_X/2,CANVAS_Y/2)]
 
 def feeder():
     counter = 0
-    while len(pildid)>=4:
+    while len(pics)>=4:
         corners = CORNERS[:]
         print corners
         canvas = Image.new('RGBA', (CANVAS_X, CANVAS_Y))
