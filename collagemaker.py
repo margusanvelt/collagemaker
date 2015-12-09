@@ -43,7 +43,7 @@ def feeder():
                     pic = pic.resize((baseheight,hsize), PIL.Image.ANTIALIAS) 
                 else:
                     basewidth = CANVAS_X/2
-                    wpercent = (basewidth/float(pilt.size[0]))
+                    wpercent = (basewidth/float(pic.size[0]))
                     hsize = int((float(pilt.size[1])*float(wpercent)))
                     pic = pic.resize((basewidth,hsize), PIL.Image.ANTIALIAS)
 
