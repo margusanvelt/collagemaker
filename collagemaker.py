@@ -26,7 +26,7 @@ def feeder():
         print corners
         canvas = Image.new('RGBA', (CANVAS_X, CANVAS_Y))
         
-        # Siin teeme neli pilti mis l2hevad nelikusse
+        # Here the four pictures will be rezised to fit the canvas
         for x in range(0,4):
             pic = Image.open(pics.pop(0))
             if pic.height > pic.width:
@@ -39,12 +39,12 @@ def feeder():
                 if pic.height == pic.width or pic.height/CANVAS_Y > pic.width/CANVAS_Y:
                     baseheight = CANVAS_Y/2
                     wpercent = (baseheight/float(pilt.size[0]))
-                    hsize = int((float(pilt.size[1])*float(wpercent)))
+                    hsize = int((float(pic.size[1])*float(wpercent)))
                     pic = pic.resize((baseheight,hsize), PIL.Image.ANTIALIAS) 
                 else:
                     basewidth = CANVAS_X/2
                     wpercent = (basewidth/float(pic.size[0]))
-                    hsize = int((float(pilt.size[1])*float(wpercent)))
+                    hsize = int((float(pic.size[1])*float(wpercent)))
                     pic = pic.resize((basewidth,hsize), PIL.Image.ANTIALIAS)
 
 
